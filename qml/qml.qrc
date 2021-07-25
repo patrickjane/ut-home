@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Main.qml</file>
+        <file>pages/WebPage.qml</file>
+        <file>pages/ConfigPage.qml</file>
+        <file>notify/Notification.qml</file>
+        <file>notify/Notify.qml</file>
+        <file>notify/qmldir</file>
+    </qresource>
+</RCC>

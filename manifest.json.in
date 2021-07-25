@@ -1,0 +1,15 @@
+{
+    "name": "home.s710",
+    "description": "App for accessing home assistant",
+    "architecture": "@CLICK_ARCH@",
+    "title": "Home",
+    "hooks": {
+        "Home": {
+            "apparmor": "Home.apparmor",
+            "desktop":  "Home.desktop"
+        }
+    },
+    "version": "1.0.0",
+    "maintainer": "Patrick Fial <mg.m@gmx.net>",
+    "framework" : "@CLICK_FRAMEWORK@"
+}
