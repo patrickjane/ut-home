@@ -8,6 +8,8 @@ Settings will open:
 
 I decided not to place a top bar with a settings-button, but instead make the webview fullscreen. This means you have to disable WiFi and run the app in order to bring up the configuration page whenever you want to change the home assistant URL.
 
+[![OpenStore](https://open-store.io/badges/en_US.png)](https://open-store.io/app/home.s710)
+
 ## License
 
 Copyright (C) 2021  Patrick Fial
