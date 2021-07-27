@@ -1,0 +1,43 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the home.s710 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: home.s710\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-25 12:03+0000\n"
+"PO-Revision-Date: 2021-07-27 20:04+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: nl\n"
+
+#: ../qml/pages/ConfigPage.qml:19
+msgid "Settings"
+msgstr "Instellingen"
+
+#: ../qml/pages/ConfigPage.qml:42
+msgid "Home Assistant URL"
+msgstr "Home Assistant-url"
+
+#: ../qml/pages/ConfigPage.qml:62
+msgid "Go!"
+msgstr "Openen"
+
+#: ../qml/pages/WebPage.qml:25
+msgid "Failed to load URL "
+msgstr "De url kan niet worden geladen "
+
+#: ../qml/pages/WebPage.qml:25
+msgid "Network error"
+msgstr "Netwerkfout"
+
+#: Home.desktop.in.h:1
+msgid "Home"
+msgstr "Startscherm"
