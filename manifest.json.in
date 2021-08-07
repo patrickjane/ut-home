@@ -9,7 +9,7 @@
             "desktop":  "Home.desktop"
         }
     },
-    "version": "1.1.1",
+    "version": "1.1.2",
     "maintainer": "Patrick Fial <mg.m@gmx.net>",
     "framework" : "@CLICK_FRAMEWORK@"
 }
