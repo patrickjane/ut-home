@@ -12,6 +12,6 @@ I decided not to place a top bar with a settings-button, but instead make the we
 
 ## License
 
-Copyright (C) 2021  Patrick Fial
+Copyright (C) 2021-2022 Patrick Fial
 
 Licensed under the MIT license
