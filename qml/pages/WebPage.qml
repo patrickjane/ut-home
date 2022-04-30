@@ -13,12 +13,14 @@ Item {
    Settings {
       id: settings
       property string mothership
+      property double zoomFactor: 1.0
    }
 
    WebView {
       id: webView
       anchors.fill: parent
       url: settings.mothership
+      zoomFactor: settings.zoomFactor
 
       onLoadingChanged: {
          if (loadRequest.status == WebView.LoadFailedStatus) {
@@ -29,6 +31,7 @@ Item {
    }
 
    Component.onCompleted: {
+      console.log("Mothership:", settings.mothership);
       initTimer.start()
    }
 

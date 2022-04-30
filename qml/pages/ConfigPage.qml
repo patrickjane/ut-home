@@ -12,6 +12,7 @@ Page {
    Settings {
       id: settings
       property string mothership
+      property double zoomFactor: 1.0
    }
 
    header: PageHeader {
@@ -70,6 +71,61 @@ Page {
                   }
                }
             }
+         }
+
+         ListItem {
+            height: l3.height + (divider.visible ? divider.height : 0)
+
+            ListItemLayout {
+               id: l3
+               title.text: i18n.tr("Zoom factor")
+               title.font.bold: true
+               subtitle.text: i18n.tr("Restart the app for the changes to take effect")
+               subtitle.color: "red"
+               subtitle.visible: false
+            }
+         }
+
+         ListItem {
+              anchors.left: parent.left
+              anchors.right: parent.right
+              height: l4.height + (divider.visible ? divider.height : 0)
+
+              SlotsLayout {
+                 id: l4
+                 mainSlot: Column {
+                    Slider {
+                       id: zoomFactorSlider
+                       anchors.left: parent.left
+                       anchors.right: parent.right
+                       anchors.rightMargin: units.gu(1)
+
+                       function formatValue(v) { return null }
+
+                       minimumValue: 0.1
+                       maximumValue: 5.0
+                       stepSize: 0.1
+                       value: 1.0
+                       live: true
+
+                       Settings {
+                          property alias zoomFactor: zoomFactorSlider.value
+                       }
+
+                       onValueChanged: {
+                          settings.zoomFactor = value
+                       }
+
+                       onTouched: {
+                          l3.subtitle.visible = true
+                       }
+
+                    }
+                    Text {
+                       text: zoomFactorSlider.value.toFixed(1)
+                    }
+                 }
+              }
          }
       }
    }
