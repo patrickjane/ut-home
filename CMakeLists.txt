@@ -87,4 +87,7 @@ file(GLOB_RECURSE PROJECT_SRC_FILES
     *.desktop.in
 )
 
+find_package(Qt5WebEngine REQUIRED)
+
 add_custom_target(${PROJECT_NAME}_FILES ALL SOURCES ${PROJECT_SRC_FILES})
+target_link_libraries(${PROJECT_NAME} Qt5::Core Qt5::Qml Qt5::Quick Qt5::QuickControls2 Qt5::WebEngine)

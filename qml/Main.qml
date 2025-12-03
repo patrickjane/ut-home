@@ -14,9 +14,6 @@ MainView {
       notificationId: "notification"
    }
 
-   width: units.gu(45)
-   height: units.gu(75)
-
    PageStack {
       id: pageStack
       anchors {
