@@ -16,18 +16,24 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4 # Required to mount the Github Workspace to a volume
+
     - name: build package
       uses: tuxecure/clickable@v1
       with:
         image: clickable/ci-20.04-${{ matrix.arch }}
         run: clickable build
+
     - name: Upload .click package
       uses: actions/upload-artifact@v4
       with:
         name: click-packages-${{ matrix.arch }}
         path: build/*/app/*.click
+
     - name: Publish to Open Store
       if: startsWith(github.ref, 'refs/tags/')
+      uses: tuxecure/clickable@v1
       env:
         OPENSTORE_KEY: ${{ secrets.OPENSTORE_KEY }}
-      run: clickable publish "* $(git log -1 --pretty=%B | head -1)" --apikey ${OPENSTORE_KEY}
+      with:
+        image: clickable/ci-20.04-${{ matrix.arch }}
+        run: clickable publish "* $(git log -1 --pretty=%B | head -1)" --apikey ${OPENSTORE_KEY}
